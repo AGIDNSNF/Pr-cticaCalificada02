@@ -35,7 +35,7 @@ header h1 { margin: 0; padding: 26px 0 54px; font-size: 88px; line-height: 1.2; 
 .precio { font-size: 19px; margin: 0 0 18px; }
 .agregar { width: 100%; margin-top: auto; border: 1px solid #57574e; border-radius: 4px; background: transparent; padding: 10px 5px; font-size: 14px; }
 .agregar:hover { background: #e7e5dd; }
-footer { margin-top: 52px; padding: 12px 8px 0; }
+footer { margin-top: 0; padding: 12px 8px 0; }
 .columnas-footer { border-top: 1px solid #303030; padding: 34px 3% 48px; gap: 25px; }
 .columnas-footer section { font-size: 10px; line-height: 1.6; }
 .columnas-footer h2 { font-size: 13px; font-weight: 400; margin: 0 0 12px; }
