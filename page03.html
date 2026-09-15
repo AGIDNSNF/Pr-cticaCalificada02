@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantas | Recién llegados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/page03/css/estilos.css">
+  <script src="assets/page03/js/tienda.js" defer></script>
+</head>
+<body>
+  <header class="bg-black text-white">
+    <div class="promocion flex items-center justify-center gap-3">
+      <p>-15% en la primera compra</p>
+      <a href="mailto:info@misitio.com?subject=Registro" class="registro">Registrarse</a>
+    </div>
+    <nav class="navegacion flex items-center justify-between" aria-label="Navegación principal">
+      <div class="categorias flex flex-wrap">
+        <a href="#productos" class="activo" aria-current="page">Plantas</a>
+        <a href="#maceta">Macetas</a>
+        <a href="#productos">Oferta</a>
+        <a href="#contacto">Suscripciones</a>
+        <a href="#contacto">Cuidado</a>
+      </div>
+      <div class="cuenta flex items-center gap-5">
+        <a href="mailto:info@misitio.com" class="entrar flex items-center gap-2">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 14a8 8 0 0 1-5.7-2.4 6 6 0 0 1 11.4 0A8 8 0 0 1 12 20Z"/></svg>
+          Entrar
+        </a>
+        <a href="#productos" aria-label="Ver productos"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg></a>
+        <span class="flex items-center gap-1"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>Carrito <span id="cantidad">0</span></span>
+      </div>
+    </nav>
+    <h1 class="text-center">Plantas</h1>
+  </header>
+
+  <main id="productos">
+    <section class="catalogo" aria-labelledby="titulo-productos">
+      <div class="encabezado flex items-center justify-between gap-4">
+        <h2 id="titulo-productos">Recién llegados</h2>
+        <button class="comprar" id="comprar-todo" type="button">Comprar todo</button>
+      </div>
+      <div class="productos flex flex-wrap">
+        <article class="producto flex flex-col">
+          <div class="foto"><span class="etiqueta">Recién llegado</span><span class="pendiente">Ficus lyrata</span><img src="assets/page03/images/ficus-lyrata.jpg" alt="Ficus lyrata en una maceta negra" width="300" height="400"></div>
+          <h3>Ficus lyrata</h3><p class="precio">$699.99</p>
+          <button class="agregar" type="button" data-producto="Ficus lyrata">Agregar al carrito</button>
+        </article>
+        <article class="producto flex flex-col" id="maceta">
+          <div class="foto"><span class="etiqueta">Recién llegado</span><span class="pendiente">Maceta oxidada</span><img src="assets/page03/images/maceta-oxidada.jpg" alt="Maceta oscura con acabado oxidado" width="300" height="400"></div>
+          <h3>Maceta oxidada</h3><p class="precio">$399.99</p>
+          <button class="agregar" type="button" data-producto="Maceta oxidada">Agregar al carrito</button>
+        </article>
+        <article class="producto flex flex-col">
+          <div class="foto"><span class="etiqueta">Recién llegado</span><span class="pendiente">Cactus</span><img src="assets/page03/images/cactus.jpg" alt="Cactus alto en una maceta gris" width="300" height="400"></div>
+          <h3>Cactus</h3><p class="precio">$399.99</p>
+          <button class="agregar" type="button" data-producto="Cactus">Agregar al carrito</button>
+        </article>
+        <article class="producto flex flex-col">
+          <div class="foto"><span class="etiqueta">Recién llegado</span><span class="pendiente">Cesto de madera</span><img src="assets/page03/images/cesto-madera.jpg" alt="Cesto tejido con soporte de madera" width="300" height="400"></div>
+          <h3>Cesto de madera</h3><p class="precio">$559.99</p>
+          <button class="agregar" type="button" data-producto="Cesto de madera">Agregar al carrito</button>
+        </article>
+      </div>
+      <p id="mensaje" class="sr-only" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="bg-black text-white" id="contacto">
+    <div class="columnas-footer flex flex-wrap justify-between">
+      <section><h2>Contacto</h2><p>Dirección: Av. Fray A.<br>Alcalde 10 44100<br>Guadalajara, Jal., México</p><p>Tel: +52-1-33-12345678</p><a href="mailto:info@misitio.com">Email: info@misitio.com</a></section>
+      <section><h2>Tienda</h2><a href="#productos">Comprar todo</a><a href="#productos">Plantas</a><a href="#maceta">Macetas</a><a href="#productos">Oferta</a><a href="mailto:info@misitio.com">Suscripciones</a><a href="mailto:info@misitio.com">Cuidado</a></section>
+      <section><h2>Enlaces útiles</h2><a href="mailto:info@misitio.com?subject=Consulta">FAQ</a><a href="mailto:info@misitio.com?subject=Envios%20y%20devoluciones">Envío y devoluciones</a><a href="mailto:info@misitio.com?subject=Terminos%20y%20condiciones">Términos y condiciones</a><a href="mailto:info@misitio.com?subject=Metodos%20de%20pago">Métodos de pago</a></section>
+      <section><h2>Empresa</h2><a href="#contacto">Nosotros</a><a href="mailto:info@misitio.com">Contáctanos</a></section>
+      <section><h2>Horarios</h2><p>Lun - Vie: 7:00 - 22:00</p><p>Sábado: 8:00 - 22:00</p><p>Domingo: 8:00 - 35:00</p></section>
+    </div>
+    <p class="copyright text-center">© 2035 Creado por</p>
+  </footer>
+  <a class="chat flex items-center justify-center" href="mailto:info@misitio.com" aria-label="Contactar con la tienda"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 4h18v14H8l-5 3V4Z"/><path d="M7 8h10M7 12h7"/></svg></a>
+</body>
+</html>
