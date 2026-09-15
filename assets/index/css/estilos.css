@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f7f7f7; color: #363636; }
+.principal { padding-top: 48px; }
+.principal .titulo { margin: 0; font-size: clamp(22px, 3vw, 30px); font-weight: 600; line-height: 1.4; }
+.tarjetas { width: 100%; max-width: 850px; margin-top: 72px; }
+.tarjeta { display: block; width: 220px; height: 235px; border-radius: 12px; perspective: 1000px; text-decoration: none; }
+.giro { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .8s ease; }
+.cara { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: #8bb7e1; color: #fff; font-size: 32px; font-weight: 600; box-shadow: 0 12px 18px rgb(75 113 149 / 18%); backface-visibility: hidden; }
+.reverso { transform: rotateX(180deg); }
+.frente span { transition: transform .8s ease; }
+.tarjeta:hover .frente span,
+.tarjeta:focus-visible .frente span,
+.tarjeta:active .frente span { transform: rotate(180deg); }
+.tarjeta:hover .giro,
+.tarjeta:focus-visible .giro,
+.tarjeta:active .giro { transform: rotateX(180deg) rotateY(180deg); }
+.tarjeta:focus-visible { outline: 3px solid #326697; outline-offset: 8px; }
+
+@media (max-width: 599px) {
+  .principal { padding-top: 36px; }
+  .tarjetas { margin-top: 40px; }
+  .tarjeta { width: min(100%, 260px); height: 220px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .giro, .frente span { transition: none; }
+  .tarjeta:hover .giro,
+  .tarjeta:focus-visible .giro,
+  .tarjeta:active .giro,
+  .tarjeta:hover .frente span,
+  .tarjeta:focus-visible .frente span,
+  .tarjeta:active .frente span { transform: none; }
+}

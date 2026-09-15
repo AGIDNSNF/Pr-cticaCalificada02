@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página principal de la práctica: acceso a las tres páginas del equipo.">
+  <title>Página Principal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/index/css/estilos.css">
+</head>
+<body>
+  <main class="principal min-h-screen flex flex-col items-center px-6 py-12">
+    <h1 class="titulo text-center">Diseño web con 3 cards animados</h1>
+    <nav class="tarjetas flex flex-wrap justify-center gap-8" aria-label="Páginas del equipo">
+      <a class="tarjeta" href="page01.html" aria-label="Abrir page1">
+        <span class="giro">
+          <span class="cara frente"><span>page1</span></span>
+          <span class="cara reverso" aria-hidden="true">page1</span>
+        </span>
+      </a>
+      <a class="tarjeta" href="page02.html" aria-label="Abrir page2">
+        <span class="giro">
+          <span class="cara frente"><span>page2</span></span>
+          <span class="cara reverso" aria-hidden="true">page2</span>
+        </span>
+      </a>
+      <a class="tarjeta" href="page03.html" aria-label="Abrir page3">
+        <span class="giro">
+          <span class="cara frente"><span>page3</span></span>
+          <span class="cara reverso" aria-hidden="true">page3</span>
+        </span>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
